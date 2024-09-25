@@ -6,9 +6,9 @@
     --color-white: rgb(255, 255, 255); 
 
     --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171); 
+    --text-color-third: rgb(0, 99, 248); 
 
-    --first-color: rgb(110, 87, 224);
+    --first-color: rgba(102, 79, 216, 0.548);
     --first-color-hover: rgb(40, 91, 212);
 
     --second-color: rgb(0, 201, 250);
@@ -103,7 +103,6 @@ nav{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-third);
-    color: rgb(139, 139, 255);
 }
 
 .nav-logo span{
@@ -171,11 +170,58 @@ nav{
 .featured-text-card span{
     /* background: var(--third-color); */
     color: var(--color-white);
-    background: rgba(5, 5, 151, 0.555);
+    background: rgba(64, 89, 143, 0.9);
     padding: 3px 8px;
     font-size: 12px;
     border-radius: 10px;
 }
+
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px ;
+}
+
+.featured-name .typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
+}
+
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--text-color-second);
+}
+
+.featured-text-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.featured-text-btn>.blue-btn{
+    background: rgba(64, 89, 143, 0.9);
+    color: var(--color-white);
+}
+
+
+.social_icons{
+    display: flex;
+    margin-top: 5rem;
+    gap: 30px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 1);
+}
+
+
 
 
 
