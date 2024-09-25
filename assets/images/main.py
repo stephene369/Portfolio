@@ -15,6 +15,6 @@ def remove_background(input_path, output_path):
     output_image.save(output_path)
 
 # Example usage
-input_path = 'me.jpg'
-output_path = 'output_image_no_bg.png'
+input_path = 'me.jpeg'
+output_path = 'me1.png'
 remove_background(input_path, output_path)
