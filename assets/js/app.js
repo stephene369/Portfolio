@@ -1,7 +1,17 @@
 
 
 
+function myMenuFunction(){
+    var menuBtn = document.getElementById('myNavMenu');
 
+
+    if (menuBtn.className === "nav-menu"){
+        menuBtn.className += " responsive"
+    }else{
+        menuBtn.className = "nav-menu"
+    }
+
+}
 
 
 
@@ -11,7 +21,7 @@
 
 // Function to change button color
 function changeButtonColor() {
-    const button = document.getElementById('downloadCv');
+    const buttons = document.querySelectorAll('#downloadCv');
     const colors = [
         'rgba(110, 87, 224, 0.3)',
         'rgba(0, 201, 250, 0.3)',
@@ -43,12 +53,40 @@ function changeButtonColor() {
         'rgba(186, 85, 211, 0.3)',
         'rgba(240, 230, 140, 0.3)',
         'rgba(70, 130, 180, 0.3)']; // 20 different colors with 0.3 alpha
+    
+    const reversedColors = colors.map(color => color.replace('0.3', '0.1')).reverse();
     let currentIndex = 0;
+    
     setInterval(() => {
-        button.style.backgroundColor = colors[currentIndex];
+        buttons.forEach((button, index) => {
+            if (index === 0) {
+                button.style.backgroundColor = colors[currentIndex];
+            } else if (index === 1) {
+                button.style.backgroundColor = reversedColors[currentIndex];
+            }
+        });
         currentIndex = (currentIndex + 1) % colors.length;
-    }, 150); // Change color every 2 seconds
+    }, 150); // Change color every 150 milliseconds
 }
 
 // Call the function when the page loads
-window.onload = changeButtonColor;
+window.onload = changeButtonColor;window.onscroll = function(){ headerShadow() }; 
+
+function headerShadow(){
+    const navHeader =  document.getElementById('header');
+    const downloadCv = document.getElementById('downloadCv');
+
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+        navHeader.style.boxShadow = '30px 3px 50px rgba(0, 0, 250, 0.2)';
+        navHeader.style.height = "70px"
+        navHeader.style.lineHeight = '70px';
+
+        downloadCv.style.boxShadow = '0 0 20px rgba(0, 0, 250, 0.2)';
+    }else{
+        navHeader.style.boxShadow = 'none';
+        navHeader.style.height = "90px"
+        navHeader.style.lineHeight = '90px';
+
+        downloadCv.style.boxShadow = 'none';
+    }
+}
