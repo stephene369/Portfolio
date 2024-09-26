@@ -115,9 +115,9 @@ const sr = ScrollReveal({
 sr.reveal(".featured-box", { delay: 100, origin: "bottom" });
 sr.reveal(".featured-text-card", { delay: 200, origin: "bottom" });
 sr.reveal(".featured-name", { delay: 100, origin: "left" });
-sr.reveal(".featured-text-info", { delay: 1000, origin: "left" });
-sr.reveal(".featured-image", { delay: 1000, origin: "right" });
-sr.reveal(".social_icons", { delay: 1000, origin: "left" });
-sr.reveal("#downloadCv", { delay: 1000, origin: "left" });
+sr.reveal(".featured-text-info", { delay: 500, origin: "left" });
+sr.reveal(".featured-image", { delay: 500, origin: "right" });
+sr.reveal(".social_icons", { delay: 500, origin: "left" });
+sr.reveal("#downloadCv", { delay: 500, origin: "left" });
 
-
+sr.reveal(".section", { delay: 500, origin: "left" });
