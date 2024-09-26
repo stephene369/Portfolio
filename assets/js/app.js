@@ -114,11 +114,10 @@ const sr = ScrollReveal({
 
 sr.reveal(".featured-box", { delay: 100, origin: "bottom" });
 sr.reveal(".featured-text-card", { delay: 200, origin: "bottom" });
-sr.reveal(".featured-name", { delay: 1500, origin: "left" });
-sr.reveal(".featured-text-info", { delay: 2000, origin: "left" });
-sr.reveal(".featured-image", { delay: 4000, origin: "right" });
+sr.reveal(".featured-name", { delay: 100, origin: "left" });
+sr.reveal(".featured-text-info", { delay: 1000, origin: "left" });
+sr.reveal(".featured-image", { delay: 2000, origin: "right" });
 sr.reveal(".social_icons", { delay: 1500, origin: "left" });
-sr.reveal(".nav-button", { delay: 5000, origin: "left" });
 sr.reveal("#downloadCv", { delay: 3000, origin: "left" });
 
 
