@@ -69,6 +69,8 @@ function changeButtonColor() {
     }, 150); // Change color every 150 milliseconds
 }
 
+
+
 // Call the function when the page loads
 window.onload = changeButtonColor;window.onscroll = function(){ headerShadow() }; 
 
@@ -77,7 +79,7 @@ function headerShadow(){
     const downloadCv = document.getElementById('downloadCv');
 
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-        navHeader.style.boxShadow = '30px 3px 50px rgba(0, 0, 250, 0.2)';
+        navHeader.style.boxShadow = '30px 3px 50px rgba(0, 0, 250, 0.3)';
         navHeader.style.height = "70px"
         navHeader.style.lineHeight = '70px';
 
