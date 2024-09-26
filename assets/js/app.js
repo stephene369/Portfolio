@@ -96,11 +96,19 @@ function headerShadow(){
 
 
 var typingEffect = new Typed(".typedText", {
-    strings: ["Web Developer", "Web Designer", "Freelancer"],
+    strings: [
+        "DevOps Engineer",
+        "Cloud Engineer",
+        "Web Developer",
+        "Software Engineer",
+        "Full Stack Developer",
+        "Python Developer", 
+        "Freelancer",
+    ],
     typeSpeed: 100,
     backSpeed: 80,
     loop: true,
-    backDelay: 1500,
+    backDelay: 1100,
 })
 
 
