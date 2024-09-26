@@ -182,6 +182,7 @@ nav {
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
+    min-height: 130px;
 }
 
 .featured-name .typedText {
