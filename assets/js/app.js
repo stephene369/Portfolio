@@ -120,7 +120,7 @@ Cloud Engineer| DevOps, AWS Solution Architect|
 Data Engineer| Data Scientist| Machine Learning Engineer ...
 `
     ],
-    typeSpeed: 20,
+    typeSpeed: 10,
     backSpeed: 1000,
     loop: false,
     backDelay: 100,
@@ -141,7 +141,7 @@ sr.reveal(".featured-text-info", { delay: 200, origin: "left" });
 sr.reveal(".featured-image", { delay: 200, origin: "right" });
 sr.reveal(".social_icons", { delay: 200, origin: "left" });
 sr.reveal("#downloadCv", { delay: 200, origin: "left" });
-sr.reveal(".section", { delay: 200, origin: "left" });
+sr.reveal(".section", { delay: 100, origin: "left" });
 
 
 
