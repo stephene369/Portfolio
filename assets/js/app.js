@@ -1,13 +1,13 @@
 
 
 
-function myMenuFunction(){
+function myMenuFunction() {
     var menuBtn = document.getElementById('myNavMenu');
 
 
-    if (menuBtn.className === "nav-menu"){
+    if (menuBtn.className === "nav-menu") {
         menuBtn.className += " responsive"
-    }else{
+    } else {
         menuBtn.className = "nav-menu"
     }
 
@@ -53,10 +53,10 @@ function changeButtonColor() {
         'rgba(186, 85, 211, 0.3)',
         'rgba(240, 230, 140, 0.3)',
         'rgba(70, 130, 180, 0.3)']; // 20 different colors with 0.3 alpha
-    
+
     const reversedColors = colors.map(color => color.replace('0.3', '0.1')).reverse();
     let currentIndex = 0;
-    
+
     setInterval(() => {
         buttons.forEach((button, index) => {
             if (index === 0) {
@@ -72,19 +72,19 @@ function changeButtonColor() {
 
 
 // Call the function when the page loads
-window.onload = changeButtonColor;window.onscroll = function(){ headerShadow() }; 
+window.onload = changeButtonColor; window.onscroll = function () { headerShadow() };
 
-function headerShadow(){
-    const navHeader =  document.getElementById('header');
+function headerShadow() {
+    const navHeader = document.getElementById('header');
     const downloadCv = document.getElementById('downloadCv');
 
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         navHeader.style.boxShadow = '30px 3px 50px rgba(0, 0, 250, 0.3)';
         navHeader.style.height = "70px"
         navHeader.style.lineHeight = '70px';
 
         downloadCv.style.boxShadow = '0 0 20px rgba(0, 0, 250, 0.2)';
-    }else{
+    } else {
         navHeader.style.boxShadow = 'none';
         navHeader.style.height = "90px"
         navHeader.style.lineHeight = '90px';
@@ -102,7 +102,7 @@ var typingEffect = new Typed(".typedText", {
         "Web Developer",
         "Software Engineer",
         "Full Stack Developer",
-        "Python Developer", 
+        "Python Developer",
         "Freelancer",
     ],
     typeSpeed: 100,
@@ -111,6 +111,20 @@ var typingEffect = new Typed(".typedText", {
     backDelay: 1100,
 })
 
+var typingEffect2 = new Typed(".featured-text-info-text", {
+    strings: [
+        `
+Experienced in Python Web-development|Software Engineer|
+Full stack Developer (React, Next, Tailwindcss, Appwrite, ...)|
+Cloud Engineer| DevOps, AWS Solution Architect|
+Data Engineer| Data Scientist| Machine Learning Engineer ...
+`
+    ],
+    typeSpeed: 20,
+    backSpeed: 1000,
+    loop: false,
+    backDelay: 100,
+})
 
 const sr = ScrollReveal({
     origin: 'top',
@@ -127,5 +141,38 @@ sr.reveal(".featured-text-info", { delay: 200, origin: "left" });
 sr.reveal(".featured-image", { delay: 200, origin: "right" });
 sr.reveal(".social_icons", { delay: 200, origin: "left" });
 sr.reveal("#downloadCv", { delay: 200, origin: "left" });
-
 sr.reveal(".section", { delay: 200, origin: "left" });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var modal = document.getElementById("projectModal");
+var span = document.getElementsByClassName("close")[0];
+var projectBoxes = document.querySelectorAll('.project-box');
+
+projectBoxes.forEach(function(box) {
+  box.onclick = function() {
+    modal.style.display = "flex";
+    document.getElementById('modalBody').innerHTML = this.innerHTML;
+  }
+});
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
