@@ -397,7 +397,7 @@ h3 {
 
 .about-info p {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #777;
 }
 
@@ -494,7 +494,7 @@ h3 {
     display: flex;
     text-align: center;
     text-wrap: wrap;
-    font-size: 16px;
+    font-size: 15px;
     font-weight:300;
     color: black;
 }
@@ -547,7 +547,7 @@ h3 {
 }
 
 .contact-info>p>i{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 
@@ -642,6 +642,14 @@ footer {
   }
 
 
+  @media only screen and (max-width: 1400px) {
+
+    .project-image img{
+        width: 100%;
+    }
+
+  }
+
 @media only screen and (max-width: 930px) {
     .featured-text {
         padding: 0;
@@ -653,10 +661,6 @@ footer {
     }
     .scroll-btn{
         display: none;
-    }
-
-    .project-image img{
-        width: 100%;
     }
 
     .modal-content{
