@@ -1,5 +1,14 @@
+// Fonction pour surveiller et ajuster le zoom
+function surveillerEtAjusterZoom() {
+    // Vérifier si le zoom est différent de 100%
+    if (Math.abs(window.devicePixelRatio - 1) > 0.001) {
+        // Réinitialiser le zoom à 100%
+        document.body.style.zoom = "100%"
+    }
+}
 
-
+// Surveiller en temps réel
+setInterval(surveillerEtAjusterZoom, 100); // Vérifier toutes les 100 millisecondes
 
 function myMenuFunction() {
     var menuBtn = document.getElementById('myNavMenu');
