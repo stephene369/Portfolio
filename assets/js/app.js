@@ -1,14 +1,14 @@
-// Fonction pour surveiller et ajuster le zoom
-function surveillerEtAjusterZoom() {
-    // Vérifier si le zoom est différent de 100%
-    if (Math.abs(window.devicePixelRatio - 1) > 0.001) {
-        // Réinitialiser le zoom à 100%
-        document.body.style.zoom = "100%"
-    }
-}
+// // Fonction pour surveiller et ajuster le zoom
+// function surveillerEtAjusterZoom() {
+//     // Vérifier si le zoom est différent de 100%
+//     if (Math.abs(window.devicePixelRatio - 1) > 0.001) {
+//         // Réinitialiser le zoom à 100%
+//         document.body.style.zoom = "100%"
+//     }
+// }
 
-// Surveiller en temps réel
-setInterval(surveillerEtAjusterZoom, 100); // Vérifier toutes les 100 millisecondes
+// // Surveiller en temps réel
+// setInterval(surveillerEtAjusterZoom, 100); // Vérifier toutes les 100 millisecondes
 
 function myMenuFunction() {
     var menuBtn = document.getElementById('myNavMenu');
@@ -23,10 +23,34 @@ function myMenuFunction() {
 }
 
 
+// Fonction pour changer la couleur du bouton
+function changeButtonColor() {
+    const colors = [
+        '#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF',
+        '#00FFFF', '#FFA500', '#800080', '#008000', '#FFC0CB',
+        '#A52A2A', '#808080', '#FFD700', '#4B0082', '#40E0D0'
+    ]
+    const button = document.getElementById('downloadApk')
+    if (!button) {
+        console.error("Le bouton 'downloadApk' n'a pas été trouvé.")
+        return
+    }
+    let currentIndex = 0
 
+    function changeColor() {
+        button.style.background = colors[currentIndex]
+        currentIndex = (currentIndex + 1) % colors.length
+    }
 
+    // Changer la couleur immédiatement
+    changeColor()
 
+    // Puis changer la couleur toutes les 300 ms
+    setInterval(changeColor, 300)
+}
 
+// Appeler la fonction lorsque le DOM est chargé
+document.addEventListener('DOMContentLoaded', changeButtonColor)
 
 // Function to change button color
 function changeButtonColor() {
@@ -64,7 +88,7 @@ function changeButtonColor() {
         'rgba(70, 130, 180, 0.3)']; // 20 different colors with 0.3 alpha
 
     const reversedColors = colors.map(color => color.replace('0.3', '0.1')).reverse();
-    let currentIndex = 0;
+    let currentIndex = 0;   
 
     setInterval(() => {
         buttons.forEach((button, index) => {
@@ -135,21 +159,21 @@ Data Engineer| Data Scientist| Machine Learning Engineer ...
     backDelay: 100,
 })
 
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    reset: true
-});
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '60px',
+//     duration: 2500,
+//     delay: 400,
+//     reset: true
+// });
 
-sr.reveal(".featured-box", { delay: 100, origin: "bottom" });
-sr.reveal(".featured-text-card", { delay: 100, origin: "bottom" });
-sr.reveal(".featured-name", { delay: 100, origin: "left" });
-sr.reveal(".featured-text-info", { delay: 100, origin: "left" });
-sr.reveal(".featured-image", { delay: 100, origin: "right" });
-sr.reveal(".social_icons", { delay: 100, origin: "left" });
-sr.reveal("#downloadCv", { delay: 100, origin: "left" });
+// sr.reveal(".featured-box", { delay: 100, origin: "bottom" });
+// sr.reveal(".featured-text-card", { delay: 100, origin: "bottom" });
+// sr.reveal(".featured-name", { delay: 100, origin: "left" });
+// sr.reveal(".featured-text-info", { delay: 100, origin: "left" });
+// sr.reveal(".featured-image", { delay: 100, origin: "right" });
+// sr.reveal(".social_icons", { delay: 100, origin: "left" });
+// sr.reveal("#downloadCv", { delay: 100, origin: "left" });
 
 
 
